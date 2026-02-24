@@ -1,0 +1,31 @@
+body {
+    min-height: 100vh;
+    background-image: url(./assets/images/quizz-app-background.png);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.main-site{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.question-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.question-card {
+    width: 40rem;
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
