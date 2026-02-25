@@ -17,12 +17,18 @@ function showQuestion() {
 
 function answer(selection) {
     let question = questions[currentQuestion];
-    let selectedQuestionNumber = selection.slice(-1)
+    let selectedQuestionNumber = selection.slice(0, -1)
+    let selectRightAnswerNumber = question["right-answer"];
+    
+    let idOfRightAnswer = selectedQuestionNumber + selectRightAnswerNumber;
+
+    
     if (question["right-answer"] == selectedQuestionNumber){
-        document.getElementById(selection).classList.add('bg-success')
+        document.getElementById(selection).classList.add('bg-success');
         
     }else {
-        document.getElementById(selection).parentNode.classList.add('bg-danger')
+        document.getElementById(selection).parentNode.classList.add('bg-danger');
+        document.getElementById(idOfRightAnswer).parentNode.classList.add('bg-success');
     }
-    
+    document.getElementById('next-button').disabled = false;
 }
