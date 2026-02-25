@@ -29,3 +29,12 @@ body {
     height: 250px;
     object-fit: cover;
 }
+
+.answer-block:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0 , 200, 0.1);
+}
+
+.bg-success, .bg-danger{
+    color: white;
+}

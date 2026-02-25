@@ -80,4 +80,4 @@ let questions = [
         "answer-4": "Kommt drauf an",
         "right-answer": 3
     }
-]
+];

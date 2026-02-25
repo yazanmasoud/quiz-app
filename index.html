@@ -14,7 +14,7 @@
 
 </head>
 
-<body>
+<body onload="init()">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Navbar</a>
@@ -55,46 +55,45 @@
                 </form>
             </div>
         </div>
-
-
     </nav>
+
     <main class="main-site">
         <div class="card question-card">
             <img src="./assets/images/quizz-app-card.png" class="card-img-top">
             <div class="card-body">
-                <h5 class="card-title">Frage:</h5>
+                <h5 id="question-1" class="card-title">Frage:</h5>
 
-                <div class="card mb-2">
-                    <div class="card-body">
+                <div class="card answer-block mb-2">
+                    <div id="answer-1" class="card-body" onclick="answer('answer-1')">
                         Antwort
                     </div>
                 </div>
 
-                <div class="card mb-2">
-                    <div class="card-body">
+                <div class="card answer-block mb-2">
+                    <div id="answer-2" class="card-body" onclick="answer('answer-2')">
                         Antwort
                     </div>
                 </div>
 
-                <div class="card mb-2">
-                    <div class="card-body">
+                <div class="card answer-block mb-2">
+                    <div id="answer-3" class="card-body" onclick="answer('answer-3')" >
                         Antwort
                     </div>
                 </div>
 
-                <div class="card mb-2">
-                    <div class="card-body">
+                <div class="card answer-block mb-2">
+                    <div id="answer-4" class="card-body" onclick="answer('answer-4')">
                         Antwort
                     </div>
                 </div>
                 <div class="question-footer">
-                    <span><strong>1</strong>von<strong>10</strong></span>
+                    <span><strong>1</strong>von<strong id="all-questions"></strong></span>
                     <button class="btn btn-primary">Nächste</button>
                 </div>
-                
+
             </div>
         </div>
-        </div>
+
     </main>
 </body>
 
