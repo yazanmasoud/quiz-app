@@ -6,14 +6,20 @@ function init() {
 let currentQuestion = 0;
 
 function showQuestion() {
-    let question = questions[currentQuestion];
 
-    document.getElementById('question-1').innerHTML = "Frage: " + question.question;
-    document.getElementById('answer-1').innerHTML = question["answer-1"];
-    document.getElementById('answer-2').innerHTML = question["answer-2"];
-    document.getElementById('answer-3').innerHTML = question["answer-3"];
-    document.getElementById('answer-4').innerHTML = question["answer-4"];
-    document.getElementById('current-question-number').innerText =1;
+    if (currentQuestion >= questions.length) {
+        document.getElementById('end-screen').style = "";
+        document.getElementById('question-body').style = "display: none"
+    } else {
+        let question = questions[currentQuestion];
+
+        document.getElementById('question-1').innerHTML = "Frage: " + question.question;
+        document.getElementById('answer-1').innerHTML = question["answer-1"];
+        document.getElementById('answer-2').innerHTML = question["answer-2"];
+        document.getElementById('answer-3').innerHTML = question["answer-3"];
+        document.getElementById('answer-4').innerHTML = question["answer-4"];
+        document.getElementById('current-question-number').innerHTML = currentQuestion + 1;
+    }
 }
 
 function answer(selection) {
