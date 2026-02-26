@@ -59,11 +59,20 @@
 
     <main class="main-site">
         <div class="card question-card">
-            <img src="./assets/images/quizz-app-card.png" class="card-img-top">
 
-            <div class="card-body" id="end-screen" style="display: none;">Spiel wurde beendet</div>
+            <div class="card-body" id="end-screen" style="display: none;">
+                <span class="end-screen-titel">Quis beendet</span>
+                <img class="width-100" src="./assets/images/youWon.png" alt="">
+                <span class="end-screen-text">du hast <strong id="end-right-answers">  </strong> von <strong> 10 </strong> Fragen richtig
+                    beantwortet.</span>
 
-    
+            </div>
+
+
+
+
+            <img id="card-img-top" src="./assets/images/quizz-app-card.png" class="card-img-top">
+
             <div class="card-body" id="question-body">
                 <h5 id="question-1" class="card-title">Frage:</h5>
 
@@ -80,7 +89,7 @@
                 </div>
 
                 <div class="card answer-block mb-2">
-                    <div id="answer-3" class="card-body" onclick="answer('answer-3')" >
+                    <div id="answer-3" class="card-body" onclick="answer('answer-3')">
                         Antwort
                     </div>
                 </div>
@@ -92,7 +101,8 @@
                 </div>
                 <div class="question-footer">
                     <span><strong id="current-question-number"></strong>von<strong id="all-questions"></strong></span>
-                    <button class="btn btn-primary" id="next-button" disabled onclick="showNextQuestion()">Nächste</button>
+                    <button class="btn btn-primary" id="next-button" disabled
+                        onclick="showNextQuestion()">Nächste</button>
                 </div>
 
             </div>

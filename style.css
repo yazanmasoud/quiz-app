@@ -8,7 +8,7 @@ body {
     background-position: center;
 }
 
-.main-site{
+.main-site {
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -30,11 +30,26 @@ body {
     object-fit: cover;
 }
 
-.answer-block:hover{
+.answer-block:hover {
     cursor: pointer;
-    background-color: rgba(0, 0 , 200, 0.1);
+    background-color: rgba(0, 0, 200, 0.1);
 }
 
-.bg-success, .bg-danger{
+.bg-success,
+.bg-danger {
     color: white;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.end-screen-titel {
+    display: flex;
+    justify-content: center;
+}
+
+.end-screen-text {
+    display: flex;
+    justify-content: center;
 }

@@ -10,6 +10,7 @@ function showQuestion() {
     if (currentQuestion >= questions.length) {
         document.getElementById('end-screen').style = "";
         document.getElementById('question-body').style = "display: none"
+        document.getElementById('card-img-top').style = "display: none"
     } else {
         let question = questions[currentQuestion];
 
@@ -28,9 +29,12 @@ function answer(selection) {
     let selectedId = selection.slice(0, -1);
     let selectRightAnswerNumber = question["right-answer"];
     let idOfRightAnswer = selectedId + selectRightAnswerNumber;
+    let rightAnswers = 0;
 
     if (question["right-answer"] == selectedQuestionNumber) {
         document.getElementById(selection).classList.add('bg-success');
+        rightAnswers++;
+        document.getElementById('end-right-answers').innerHTML += rightAnswers;
 
     } else {
         document.getElementById(selection).parentNode.classList.add('bg-danger');
